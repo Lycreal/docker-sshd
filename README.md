@@ -1,16 +1,22 @@
-A ssh server based on Ubuntu.
+A ssh server based on docker.
 
 Password login is disabled.
+
 RSA key is the only way to start a ssh connection.
 
+
+
 username:root
+
 password:root
 
 
 Usage:
 
 `docker run -d -e key="<key>" lycreal/sshd`
+
 or
+
 `docker run -d -e key="<key1>\n<key2>\n<key3>..." lycreal/sshd`
 
 
