@@ -13,4 +13,4 @@ RUN mkdir -p /root/.ssh
 
 EXPOSE 22
 
-ENTRYPOINT echo $key > /root/.ssh/authorized_keys && /usr/bin/sshd -D
+ENTRYPOINT echo $key > /root/.ssh/authorized_keys && /usr/sbin/sshd -D
