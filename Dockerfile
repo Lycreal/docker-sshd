@@ -1,16 +1,17 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 MAINTAINER Lycreal Lu <jgsly123@gmail.com>
 
-RUN apt-get update
-RUN apt-get install -y openssh-server
+RUN apt-get update && \
+    apt-get install -y openssh-server
 
-RUN mkdir /var/run/sshd
+RUN mkdir /var/run/sshd /root/.ssh
 
 RUN echo 'root:root' |chpasswd
 
-RUN mkdir -p /root/.ssh
+COPY entrypoint.sh /entrypoint
+RUN chmod +x /entrypoint
 
 EXPOSE 22
 
-ENTRYPOINT echo $key > /root/.ssh/authorized_keys && /usr/sbin/sshd -D
+ENTRYPOINT ["/entrypoint"]
