@@ -8,8 +8,7 @@ RUN apt-get update && \
 COPY entrypoint.sh /entrypoint
 
 RUN chmod +x /entrypoint && \
-    mkdir /var/run/sshd /root/.ssh && \
-    echo 'root:root' |chpasswd
+    mkdir /var/run/sshd /root/.ssh
 
 EXPOSE 22
 
