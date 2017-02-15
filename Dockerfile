@@ -1,14 +1,12 @@
-FROM ubuntu:16.04
+FROM alpine
 
-MAINTAINER Lycreal Lu <jgsly123@gmail.com>
+MAINTAINER Lycreal <jgsly123@gmail.com>
 
-RUN apt-get update && \
-    apt-get install -y openssh-server
+RUN apk add --no-cache openssh
 
 COPY entrypoint.sh /entrypoint
 
-RUN chmod +x /entrypoint && \
-    mkdir /var/run/sshd /root/.ssh
+RUN chmod +x /entrypoint
 
 EXPOSE 22
 

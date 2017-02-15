@@ -7,10 +7,6 @@ SSH server on docker. [Dockerhub page](https://hub.docker.com/r/lycreal/sshd/).
 Password login is disabled, RSA key is the **only** way to start a ssh connection.  
 So make sure to define the environment variable _key_ .  
 
-## Default User
-username:root  
-password:root  
-
 ## Usage:
 `docker run -d -e key="<key>" lycreal/sshd`  
 or  
