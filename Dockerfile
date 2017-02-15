@@ -1,6 +1,6 @@
-FROM ubuntu:16.04
+FROM ubuntu:devel
 
-MAINTAINER Lycreal Lu <jgsly123@gmail.com>
+MAINTAINER Lycreal <jgsly123@gmail.com>
 
 RUN apt-get update && \
     apt-get install -y openssh-server
