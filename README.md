@@ -1,6 +1,6 @@
 # Docker-sshd
 
-SSH server on docker. [Dockerhub page](https://hub.docker.com/r/lycreal/sshd/).
+SSH server on docker. [Docker Hub page](https://hub.docker.com/r/lycreal/sshd/).
 
 ## Description
 
