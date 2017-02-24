@@ -1,6 +1,6 @@
 # Docker-sshd:ubuntu
 
-SSH server on docker. [Docker Hub Page](https://hub.docker.com/r/lycreal/sshd:ubuntu/).
+SSH server on docker. [Docker Hub Page](https://hub.docker.com/r/lycreal/sshd/).
 
 ## Description
 
