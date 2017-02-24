@@ -1,4 +1,4 @@
-FROM ubuntu:devel
+FROM ubuntu:16.10
 
 MAINTAINER Lycreal <jgsly123@gmail.com>
 

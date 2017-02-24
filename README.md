@@ -1,6 +1,6 @@
 # Docker-sshd:ubuntu
 
-SSH server on docker. [Dockerhub page](https://hub.docker.com/r/lycreal/sshd:ubuntu/).
+SSH server on docker. [Docker Hub Page](https://hub.docker.com/r/lycreal/sshd:ubuntu/).
 
 ## Description
 
@@ -25,7 +25,7 @@ key=`cat ~/.ssh/id_rsa.pub`
 docker run -d -e key=$key -p 2222:22 lycreal/sshd:ubuntu
 ```
 
-After that, run `ssh root@127.0.0.1 -p 2222` to access it.  
+After starting the container, run `ssh root@127.0.0.1 -p 2222` to access it.  
 
 ## License
 [MIT-LICENSE](MIT-LICENSE)
