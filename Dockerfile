@@ -2,7 +2,7 @@ FROM alpine
 
 MAINTAINER Lycreal <jgsly123@gmail.com>
 
-RUN apk add --no-cache openssh
+RUN apk add --no-cache openssh curl
 
 COPY entrypoint.sh /entrypoint
 
