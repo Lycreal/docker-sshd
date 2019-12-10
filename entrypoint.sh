@@ -3,7 +3,7 @@
 echo $key > /root/.ssh/authorized_keys
 
 if [ $port ];then
-  sed -rn "s/#?(Port) [0-9]*/\1 ${port}/p" -i /etc/ssh/sshd_config
+  sed -r "s/#?(Port).*/\1 ${port}/" -i /etc/ssh/sshd_config
 fi
 
 while [ $users ]
