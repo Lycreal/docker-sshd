@@ -21,7 +21,7 @@ do
 done
 
 if [ $# -ne 0 ];then
-    /bin/sh -c "$*"
+    /bin/sh -c '$*'
 fi
 
 while [ true ]; do
