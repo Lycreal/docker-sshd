@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo $key > /root/.ssh/authorized_keys
 
@@ -21,7 +21,7 @@ do
 done
 
 if [ $# -ne 0 ];then
-    /bin/sh -c '$*'
+    /bin/bash -c '$*'
 fi
 
 while [ true ]; do
