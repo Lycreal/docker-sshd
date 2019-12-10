@@ -2,6 +2,10 @@
 
 echo $key > /root/.ssh/authorized_keys
 
+if [ $port ];then
+  sed -rn "s/#?(Port) [0-9]*/\1 ${port}/p" -i /etc/ssh/sshd_config
+fi
+
 while [ $users ]
 do
   user=$(echo $users | cut -d ',' -f1)
@@ -16,7 +20,6 @@ do
   fi
 done
 
-
 if [ $# -ne 0 ];then
     /bin/sh -c "$*"
 fi
@@ -24,4 +27,3 @@ fi
 while [ true ]; do
     /usr/sbin/sshd -D
 done
-
